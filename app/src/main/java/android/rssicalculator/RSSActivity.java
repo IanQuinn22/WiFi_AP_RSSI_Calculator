@@ -46,6 +46,7 @@ public class RSSActivity extends AppCompatActivity implements LocationListener {
             return;
         } else {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
         }
         lv = findViewById(R.id.list);
         wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
@@ -90,7 +91,7 @@ public class RSSActivity extends AppCompatActivity implements LocationListener {
             size--;
             while (size >= 0) {
                 HashMap<String, String> item = new HashMap<String, String>();
-                item.put(ITEM_KEY, results.get(size).SSID + " " + results.get(size).level + " dBm");
+                item.put(ITEM_KEY, results.get(size).SSID + "\t\t" + results.get(size).level + " dBm");
                 wifi_list.add(item);
                 db.addLocationRSSI(latitude, longitude, results.get(size).SSID, results.get(size).level, results.get(size).timestamp);
                 size--;

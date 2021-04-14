@@ -3,7 +3,7 @@ This application measures the RSSI values of all neighboring WiFi APs and stores
 ## Environment
 This application is built for Android Devices. Thus, in order to use this application, you must have access to an Android Device. The Database portion of the application is implemented using SQLite.
 ## Installation/Running
-In order to install this application on your Android Device, you must install Andriod Studio. Once you have installed Android Studio, clone into this repository and open it in Android Studio. The application can then 
+In order to install this application on your Android Device, you must install Android Studio. Once you have installed Android Studio, clone into this repository and open it in Android Studio. The application can then 
 be run on a device. In order for the application to run as intended, make sure that the device has granted the application the following permissions:
 * ACCESS_FINE_LOCATION
 * ACCESS_COARSE_LOCATION
